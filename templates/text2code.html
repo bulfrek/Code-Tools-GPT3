@@ -1,0 +1,28 @@
+<html>
+ <head> 
+   <title>Text2Code</title> 
+   <link rel='stylesheet' href="{{ url_for('static', filename='css/response.css') }}">
+   <link rel="shortcut icon" type="image/png" href="/static/favicon.png">
+   <meta charset='utf-8'>
+ </head>
+ <body>
+   <pre id="copyme">
+     {{ var }}
+   </pre>
+   <button onclick="copyToClipboard()">Copy to clipboard</button>
+   <script>
+     function copyToClipboard() {
+       var copyText = document.getElementById("copyme").innerText;
+       var textarea = document.createElement("textarea");
+       textarea.value = copyText;
+       document.body.appendChild(textarea);
+       textarea.select();
+       document.execCommand("copy");
+       textarea.style.display = "none";
+       var button = document.querySelector("button");
+       button.innerHTML = "Copied";
+     }
+   </script>
+ </body>
+</html>
+     

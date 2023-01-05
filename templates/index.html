@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Code tools</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="shortcut icon" type="image/png" href="/static/favicon.png">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <form method="POST">
+      <label for="input-box">Code/Text:</label>
+      <br>
+      <textarea name="input-box" id="input-box" cols="50" rows="10"></textarea>
+      <br>
+      <h1 class="policy-note">Note: This website uses OpenAI API, for data security reasons, please anonymize your code</h1>
+      <input type="submit" value="Text to code in :" name="text2code" id="text2code">
+      <select name="language" id="language-selector" >
+          <option value="python3">Python 3</option>
+          <option value="python2">Python 2</option>
+          <option value="javascript">JavaScript</option>
+          <option value="java">Java</option>
+          <option value="c">C</option>
+          <option value="c++">C++</option>
+          <option value="c#">C#</option>
+          <option value="html">HTML</option>
+          <option value="bash">Bash</option>
+          <option value="sql">SQL</option>
+          <option value="rust">Rust</option>
+          <option value="assembly">Assembly</option>
+          <option value="PHP">PHP</option>
+
+      </select>    
+      <br>
+      <input type="submit" value="Comment" name="comment">
+      <br>
+      <input type="submit" value="Improve" name="improve">
+    </form>        
+  </body>
+</html>
