@@ -27,7 +27,7 @@ def comment():
     question = (f"{request.form['input-box']}")
     
     
-  openai.api_key = "ENTER YOUR API KEY HERE"
+  openai.api_key = "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"
   response = openai.Completion.create(
       engine="text-davinci-003",
       prompt=question,
@@ -35,12 +35,12 @@ def comment():
       temperature=0.5,
     )
   var=(response["choices"][0]["text"])
-
+  
   return render_template('response.html', var=var)
 
     
 
 if __name__ == '__main__':
-  app.run(host='0.0.0.0', port=8080)
+  app.run(host='0.0.0.0')
 
    
