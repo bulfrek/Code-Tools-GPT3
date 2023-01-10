@@ -16,6 +16,15 @@ def comment():
 
   elif request.form.get('text2code'):
     question = (f"Translate this text to a {request.form['language']} code without comments: {request.form['input-box']}")
+
+  elif request.form.get('docen'):
+    question = (f"Create a full documentation of this code: {request.form['input-box']}")
+
+  elif request.form.get('docfr'):
+    question = (f"Crée moi une documentation complète de ce code : {request.form['input-box']}")
+
+  elif request.form.get('direct'):
+    question = (f"{request.form['input-box']}")
     
     
   openai.api_key = "ENTER YOUR API KEY HERE"
@@ -28,16 +37,11 @@ def comment():
   var=(response["choices"][0]["text"])
  
   if request.form.get('improve'):
-      return render_template('improve.html', var=var)
+      return render_template('response.html', var=var)
 
-  elif request.form.get('comment'):
-      return render_template('comment.html', var=var)
-      
-  elif request.form.get('text2code'):
-      return render_template('text2code.html', var=var)
     
 
 if __name__ == '__main__':
-  app.run(host='0.0.0.0')
+  app.run(host='0.0.0.0', port=8080)
 
    
