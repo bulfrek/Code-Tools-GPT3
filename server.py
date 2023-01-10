@@ -27,7 +27,7 @@ def comment():
     question = (f"{request.form['input-box']}")
     
     
-  openai.api_key = "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"
+  openai.api_key = "ENTER YOUR API KEY HERE"
   response = openai.Completion.create(
       engine="text-davinci-003",
       prompt=question,
