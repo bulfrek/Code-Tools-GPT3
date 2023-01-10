@@ -35,9 +35,8 @@ def comment():
       temperature=0.5,
     )
   var=(response["choices"][0]["text"])
- 
-  if request.form.get('improve'):
-      return render_template('response.html', var=var)
+
+  return render_template('response.html', var=var)
 
     
 
