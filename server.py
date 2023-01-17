@@ -18,10 +18,10 @@ def comment():
     question = (f"Translate this text to a {request.form['language']} code without comments: {request.form['input-box']}")
 
   elif request.form.get('docen'):
-    question = (f"Create a full documentation of this code: {request.form['input-box']}")
+    question = (f"Create a full documentation of this code/documentation: {request.form['input-box']}")
 
   elif request.form.get('docfr'):
-    question = (f"Crée moi une documentation complète de ce code : {request.form['input-box']}")
+    question = (f"Crée moi une documentation complète de ce code/documentation : {request.form['input-box']}")
 
   elif request.form.get('direct'):
     question = (f"{request.form['input-box']}")

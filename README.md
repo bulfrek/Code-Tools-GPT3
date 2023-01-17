@@ -13,6 +13,14 @@ To access the openai API youn need to enter you api key here on the server.py fi
 ```
 You can find this key here : https://beta.openai.com/account/api-keys
 
+This repo also includes a script to replace the API key and build or rebuild the docker file automatically :
+
+```
+
+bash replace_api.sh
+
+```
+
 ## Without Docker
 
 Before running the server, make sure you have all the requirements :
