@@ -16,9 +16,7 @@ You can find this key here : https://beta.openai.com/account/api-keys
 This repo also includes a script to replace the API key and build or rebuild the docker file automatically :
 
 ```
-
 bash replace_api.sh
-
 ```
 
 ## Without Docker
