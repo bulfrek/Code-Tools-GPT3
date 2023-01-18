@@ -39,7 +39,29 @@
       <br>
       <input type="submit" value="Comment" name="comment">
       <br>
-      <input type="submit" value="Improve" name="improve">
-    </form>        
+      <input type="submit" value="Improve" name="improve">      
+    </form>  
+    <div class="loading" id="loading-spinner">
+      <div class="loading-spinner"></div>
+    </div>
+    <script>
+      var spinner = document.getElementById("loading-spinner");
+      var form = document.querySelector('form');
+      var buttons = document.querySelectorAll("form input[type='submit']");
+      
+      buttons.forEach(function(button) {
+        button.addEventListener("click", function() {
+          spinner.classList.add('show-spinner');
+          form.style.filter = "brightness(50%)";
+          const scrollPosition = window.pageYOffset;
+          spinner.style.top = `calc(30% + ${scrollPosition}px)`;
+          window.addEventListener('scroll', () => {
+            const scrollPosition = window.pageYOffset;
+            spinner.style.top = `calc(30% + ${scrollPosition}px)`;
+          });
+        });
+      });
+    </script>
+         
   </body>
 </html>
